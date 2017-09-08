@@ -1,0 +1,20 @@
+body{
+  text-align: center;
+  background-color: lightgrey;
+  margin-top: 45px;
+}
+.cell{
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  margin: 2px 0;
+  line-height: 150px;
+  background-color: white;
+  vertical-align: top;
+  border-radius: 50%;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
