@@ -18,3 +18,12 @@ h1 {
   color: black;
   text-align: center;
 }
+.shell{
+  border-color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-style: inset;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top-style: none;
+}
