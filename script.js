@@ -1,15 +1,25 @@
 document.addEventListener('DOMContentLoaded', function(){
+	
+	var column1 = ["#col1-6", "#col1-5", "#col1-4", "#col1-3", "#col1-2", "#col1-1"];
+	var column2 = ["#col2-6", "#col2-5", "#col2-4", "#col2-3", "#col2-2", "#col2-1"];
+	var column3 = ["#col3-6", "#col3-5", "#col3-4", "#col3-3", "#col3-2", "#col3-1"];
+	var column4 = ["#col4-6", "#col4-5", "#col4-4", "#col4-3", "#col4-2", "#col4-1"];
+	var column5 = ["#col5-6", "#col5-5", "#col5-4", "#col5-3", "#col5-2", "#col5-1"];
+	var column6 = ["#col6-6", "#col6-5", "#col6-4", "#col6-3", "#col6-2", "#col6-1"];
+	var column7 = ["#col7-6", "#col7-5", "#col7-4", "#col7-3", "#col7-2", "#col7-1"];
 
-	var column1 = ["#col1-1", "#col1-2", "#col1-3", "#col1-4", "#col1-5", "#col1-6"];
-	var column2 = ["#col2-1", "#col2-2", "#col2-3", "#col2-4", "#col2-5", "#col2-6"];
-	var column3 = ["#col3-1", "#col3-2", "#col3-3", "#col3-4", "#col3-5", "#col3-6"];
-	var column4 = ["#col4-1", "#col4-2", "#col4-3", "#col4-4", "#col4-5", "#col4-6"];
-	var column5 = ["#col5-1", "#col5-2", "#col5-3", "#col5-4", "#col5-5", "#col5-6"];
-	var column6 = ["#col6-1", "#col6-2", "#col6-3", "#col6-4", "#col6-5", "#col6-6"];
+	var row1 = $('div.row1');
+	var row2 = $('div.row2');
+	var row3 = $('div.row3');
+	var row4 = $('div.row4');
+	var row5 = $('div.row5');
+	var row6 = $('div.row6');
+
 	var player = true;
 	var reset = $('#reset');
 	var winner;
-
+	var gameBoardArray = [row1, row2, row3, row4, row5, row6];
+	
 	reset.click(function(){
 		console.log("reset works");
 		$("h1").text("Remember How To Play Connect 4?");
@@ -18,77 +28,160 @@ document.addEventListener('DOMContentLoaded', function(){
 		$('.shell').show();
 		player = true;
 	});
-//done with classes
-	// $(".col1").click(function(){
-	// 	console.log("col1 click works");
-	// 	for(var i=0;i<column1.length;i++){
-	// 		if($(column1[i]).hasClass("empty") && player===true){
-	// 			console.log("knows white");
-	// 			$(column1[i]).css("background-color", "black");
-	// 			$(this).addClass("full");
-	// 			$(this).removeClass("empty");
-	// 			announceWinner();
-	// 			player=false;
-	// 			break;
-	// 		} else if($(column1[i]).hasClass("empty") && player===false){
-	// 			$(column1[i]).css("background-color", "gold");
-	// 			$(this).addClass("full");
-	// 			$(this).removeClass("empty");
-	// 			announceWinner();
-	// 			player=true;
-	// 			break;
-	// 		} else if ($(column1[i]).hasClass("full")) {
-	// 			continue;
-	// 		}
-	// 	}
-	// });
-//changing css color
-	// $(".col1").click(function(){
-	// 	console.log("col1 click works");
-	// 	for(var i=0;i<column1.length;i++){
-	// 		if($(column1[i]).css("background-color")==="white" && player===true){
-	// 			console.log("knows white");
-	// 			$(column1[i]).css("background-color", "black");
-	// 			announceWinner();
-	// 			player=false;
-	// 		} else if($(column1[i]).css("background-color")==="white" && player===false){
-	// 			$(column1[i]).css("background-color", "gold");
-	// 			announceWinner();
-	// 			player=true;
-	// 		} else if($(column1[i]).css("background-color")==="black" || ($(column1[i]).css("background-color")==="gold")) {
-	// 			continue;
-	// 		}
-	// 	}
-	// });
 
+	$(".col1").click(function(){
+		for(var i=0;i<column1.length;i++){
+			if($(column1[i]).hasClass("empty") && player===true){
+				$(column1[i]).css("background-color", "black");
+				$(column1[i]).addClass("full");
+				$(column1[i]).removeClass("empty");
+				announceWinner();
+				player=false;
+				break;
+			} else if($(column1[i]).hasClass("empty") && player===false){
+				$(column1[i]).css("background-color", "gold");
+				$(column1[i]).addClass("full");
+				$(column1[i]).removeClass("empty");
+				announceWinner();
+				player=true;
+				break;
+			} if ($(column1[i]).hasClass("full")) {
+				continue;
+			}
+		}
+	});
 
+	$(".col2").click(function(){
+		for(var i=0;i<column2.length;i++){
+			if($(column2[i]).hasClass("empty") && player===true){
+				$(column2[i]).css("background-color", "black");
+				$(column2[i]).addClass("full");
+				$(column2[i]).removeClass("empty");
+				announceWinner();
+				player=false;
+				break;
+			} else if($(column2[i]).hasClass("empty") && player===false){
+				$(column2[i]).css("background-color", "gold");
+				$(column2[i]).addClass("full");
+				$(column2[i]).removeClass("empty");
+				announceWinner();
+				player=true;
+				break;
+			} if ($(column2[i]).hasClass("full")) {
+				continue;
+			}
+		}
+	});
 
+	$(".col3").click(function(){
+		for(var i=0;i<column3.length;i++){
+			if($(column3[i]).hasClass("empty") && player===true){
+				$(column3[i]).css("background-color", "black");
+				$(column3[i]).addClass("full");
+				$(column3[i]).removeClass("empty");
+				announceWinner();
+				player=false;
+				break;
+			} else if($(column3[i]).hasClass("empty") && player===false){
+				$(column3[i]).css("background-color", "gold");
+				$(column3[i]).addClass("full");
+				$(column3[i]).removeClass("empty");
+				announceWinner();
+				player=true;
+				break;
+			} if ($(column3[i]).hasClass("full")) {
+				continue;
+			}
+		}
+	});
 
-	$(".cell").click(function() {
-		console.log("click works");
-		if ($(this).hasClass("empty") && player===true) {
-	            $(this).removeClass("empty");
-	            $(this).addClass("full");
-	            this.style.backgroundColor="black";
-	            announceWinner();
-	            player= false;
-	   	} else if ($(this).hasClass("empty") && player===false) {
-	    		$(this).removeClass("empty");
-	    		$(this).addClass("full");
-	            this.style.backgroundColor="gold";
-	            announceWinner();
-	            player=true;
-	    }
-	})
+	$(".col4").click(function(){
+		for(var i=0;i<column4.length;i++){
+			if($(column4[i]).hasClass("empty") && player===true){
+				$(column4[i]).css("background-color", "black");
+				$(column4[i]).addClass("full");
+				$(column4[i]).removeClass("empty");
+				announceWinner();
+				player=false;
+				break;
+			} else if($(column4[i]).hasClass("empty") && player===false){
+				$(column4[i]).css("background-color", "gold");
+				$(column4[i]).addClass("full");
+				$(column4[i]).removeClass("empty");
+				announceWinner();
+				player=true;
+				break;
+			} if ($(column4[i]).hasClass("full")) {
+				continue;
+			}
+		}
+	});
 
+	$(".col5").click(function(){
+		for(var i=0;i<column5.length;i++){
+			if($(column5[i]).hasClass("empty") && player===true){
+				$(column5[i]).css("background-color", "black");
+				$(column5[i]).addClass("full");
+				$(column5[i]).removeClass("empty");
+				announceWinner();
+				player=false;
+				break;
+			} else if($(column5[i]).hasClass("empty") && player===false){
+				$(column5[i]).css("background-color", "gold");
+				$(column5[i]).addClass("full");
+				$(column5[i]).removeClass("empty");
+				announceWinner();
+				player=true;
+				break;
+			} if ($(column5[i]).hasClass("full")) {
+				continue;
+			}
+		}
+	});
 
-	var row1 = $('div.row1');
-	var row2 = $('div.row2');
-	var row3 = $('div.row3');
-	var row4 = $('div.row4');
-	var row5 = $('div.row5');
-	var row6 = $('div.row6');
-	var gameBoardArray = [row1, row2, row3, row4, row5, row6];
+	$(".col6").click(function(){
+		for(var i=0;i<column6.length;i++){
+			if($(column6[i]).hasClass("empty") && player===true){
+				$(column6[i]).css("background-color", "black");
+				$(column6[i]).addClass("full");
+				$(column6[i]).removeClass("empty");
+				announceWinner();
+				player=false;
+				break;
+			} else if($(column6[i]).hasClass("empty") && player===false){
+				$(column6[i]).css("background-color", "gold");
+				$(column6[i]).addClass("full");
+				$(column6[i]).removeClass("empty");
+				announceWinner();
+				player=true;
+				break;
+			} if ($(column6[i]).hasClass("full")) {
+				continue;
+			}
+		}
+	});
+
+	$(".col7").click(function(){
+		for(var i=0;i<column7.length;i++){
+			if($(column7[i]).hasClass("empty") && player===true){
+				$(column7[i]).css("background-color", "black");
+				$(column7[i]).addClass("full");
+				$(column7[i]).removeClass("empty");
+				announceWinner();
+				player=false;
+				break;
+			} else if($(column7[i]).hasClass("empty") && player===false){
+				$(column7[i]).css("background-color", "gold");
+				$(column7[i]).addClass("full");
+				$(column7[i]).removeClass("empty");
+				announceWinner();
+				player=true;
+				break;
+			} if ($(column7[i]).hasClass("full")) {
+				continue;
+			}
+		}
+	});
 
 	function checkWinner(e){
 	  console.log("inside check winner checkWinner");
@@ -195,10 +288,3 @@ document.addEventListener('DOMContentLoaded', function(){
 	}
 	announceWinner();
 });
-
-
-
-
-
-
-
