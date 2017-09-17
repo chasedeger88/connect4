@@ -22,10 +22,14 @@ document.addEventListener('DOMContentLoaded', function(){
 	
 	reset.click(function(){
 		console.log("reset works");
-		$("h1").text("Remember How To Play Connect 4?");
+		$("h1").text("Chase's Connect 4!");
+		$("h1").css('color', 'black');
 		$('.cell').addClass('empty');
 		$('.cell').css('backgroundColor', 'white');
 		$('.shell').show();
+		$('.rules').show();
+		$(".gif").hide();
+		$(".gif2").hide();
 		player = true;
 	});
 
@@ -33,13 +37,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		for(var i=0;i<column1.length;i++){
 			if($(column1[i]).hasClass("empty") && player===true){
 				$(column1[i]).css("background-color", "black");
+				$("h1").css('color', 'orange');
 				$(column1[i]).addClass("full");
 				$(column1[i]).removeClass("empty");
 				announceWinner();
 				player=false;
 				break;
 			} else if($(column1[i]).hasClass("empty") && player===false){
-				$(column1[i]).css("background-color", "gold");
+				$(column1[i]).css("background-color", "darkorange");
+				$("h1").css('color', 'black');
 				$(column1[i]).addClass("full");
 				$(column1[i]).removeClass("empty");
 				announceWinner();
@@ -55,13 +61,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		for(var i=0;i<column2.length;i++){
 			if($(column2[i]).hasClass("empty") && player===true){
 				$(column2[i]).css("background-color", "black");
+				$("h1").css('color', 'orange');
 				$(column2[i]).addClass("full");
 				$(column2[i]).removeClass("empty");
 				announceWinner();
 				player=false;
 				break;
 			} else if($(column2[i]).hasClass("empty") && player===false){
-				$(column2[i]).css("background-color", "gold");
+				$(column2[i]).css("background-color", "darkorange");
+				$("h1").css('color', 'black');
 				$(column2[i]).addClass("full");
 				$(column2[i]).removeClass("empty");
 				announceWinner();
@@ -77,13 +85,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		for(var i=0;i<column3.length;i++){
 			if($(column3[i]).hasClass("empty") && player===true){
 				$(column3[i]).css("background-color", "black");
+				$("h1").css('color', 'darkorange');
 				$(column3[i]).addClass("full");
 				$(column3[i]).removeClass("empty");
 				announceWinner();
 				player=false;
 				break;
 			} else if($(column3[i]).hasClass("empty") && player===false){
-				$(column3[i]).css("background-color", "gold");
+				$(column3[i]).css("background-color", "darkorange");
+				$("h1").css('color', 'black');
 				$(column3[i]).addClass("full");
 				$(column3[i]).removeClass("empty");
 				announceWinner();
@@ -99,13 +109,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		for(var i=0;i<column4.length;i++){
 			if($(column4[i]).hasClass("empty") && player===true){
 				$(column4[i]).css("background-color", "black");
+				$("h1").css('color', 'darkorange');
 				$(column4[i]).addClass("full");
 				$(column4[i]).removeClass("empty");
 				announceWinner();
 				player=false;
 				break;
 			} else if($(column4[i]).hasClass("empty") && player===false){
-				$(column4[i]).css("background-color", "gold");
+				$(column4[i]).css("background-color", "darkorange");
+				$("h1").css('color', 'black');
 				$(column4[i]).addClass("full");
 				$(column4[i]).removeClass("empty");
 				announceWinner();
@@ -121,13 +133,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		for(var i=0;i<column5.length;i++){
 			if($(column5[i]).hasClass("empty") && player===true){
 				$(column5[i]).css("background-color", "black");
+				$("h1").css('color', 'darkorange');
 				$(column5[i]).addClass("full");
 				$(column5[i]).removeClass("empty");
 				announceWinner();
 				player=false;
 				break;
 			} else if($(column5[i]).hasClass("empty") && player===false){
-				$(column5[i]).css("background-color", "gold");
+				$(column5[i]).css("background-color", "darkorange");
+				$("h1").css('color', 'black');
 				$(column5[i]).addClass("full");
 				$(column5[i]).removeClass("empty");
 				announceWinner();
@@ -143,13 +157,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		for(var i=0;i<column6.length;i++){
 			if($(column6[i]).hasClass("empty") && player===true){
 				$(column6[i]).css("background-color", "black");
+				$("h1").css('color', 'darkorange');
 				$(column6[i]).addClass("full");
 				$(column6[i]).removeClass("empty");
 				announceWinner();
 				player=false;
 				break;
 			} else if($(column6[i]).hasClass("empty") && player===false){
-				$(column6[i]).css("background-color", "gold");
+				$(column6[i]).css("background-color", "darkorange");
+				$("h1").css('color', 'black');
 				$(column6[i]).addClass("full");
 				$(column6[i]).removeClass("empty");
 				announceWinner();
@@ -165,13 +181,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		for(var i=0;i<column7.length;i++){
 			if($(column7[i]).hasClass("empty") && player===true){
 				$(column7[i]).css("background-color", "black");
+				$("h1").css('color', 'darkorange');
 				$(column7[i]).addClass("full");
 				$(column7[i]).removeClass("empty");
 				announceWinner();
 				player=false;
 				break;
 			} else if($(column7[i]).hasClass("empty") && player===false){
-				$(column7[i]).css("background-color", "gold");
+				$(column7[i]).css("background-color", "darkorange");
+				$("h1").css('color', 'black');
 				$(column7[i]).addClass("full");
 				$(column7[i]).removeClass("empty");
 				announceWinner();
@@ -200,11 +218,11 @@ document.addEventListener('DOMContentLoaded', function(){
 	  }
 	  for(var i = 0; i < 6; i++){
 	    for(var j = 0; j < 4; j++){
-	      if(gameBoardArray[i][0].children[j].style.backgroundColor === "gold" &&
-	        gameBoardArray[i][0].children[j+1].style.backgroundColor === "gold" &&
-	        gameBoardArray[i][0].children[j+2].style.backgroundColor === "gold" &&
-	        gameBoardArray[i][0].children[j+3].style.backgroundColor === "gold"){
-	      	console.log("gold wins");
+	      if(gameBoardArray[i][0].children[j].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i][0].children[j+1].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i][0].children[j+2].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i][0].children[j+3].style.backgroundColor === "darkorange"){
+	      	console.log("darkorange wins");
 	      return true;
 	      }
 	    }
@@ -222,11 +240,11 @@ document.addEventListener('DOMContentLoaded', function(){
 	  }
 	  for(var i = 0; i < 3; i++){
 	    for(var j = 0; j< 7; j++){
-	      if(gameBoardArray[i][0].children[j].style.backgroundColor === "gold" &&
-	        gameBoardArray[i+1][0].children[j].style.backgroundColor === "gold" &&
-	        gameBoardArray[i+2][0].children[j].style.backgroundColor === "gold" &&
-	        gameBoardArray[i+3][0].children[j].style.backgroundColor === "gold"){
-	      	console.log('gold wins');
+	      if(gameBoardArray[i][0].children[j].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i+1][0].children[j].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i+2][0].children[j].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i+3][0].children[j].style.backgroundColor === "darkorange"){
+	      	console.log('darkorange wins');
 	      return true;
 	      }
 	    }
@@ -244,11 +262,11 @@ document.addEventListener('DOMContentLoaded', function(){
 	  }
 	  for(var i = 0; i < 3; i++){
 	    for(var j = 0; j< 4; j++){
-	      if(gameBoardArray[i][0].children[j].style.backgroundColor === "gold" &&
-	        gameBoardArray[i+1][0].children[j+1].style.backgroundColor === "gold" &&
-	        gameBoardArray[i+2][0].children[j+2].style.backgroundColor === "gold" &&
-	        gameBoardArray[i+3][0].children[j+3].style.backgroundColor === "gold"){
-	      	console.log('gold wins');
+	      if(gameBoardArray[i][0].children[j].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i+1][0].children[j+1].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i+2][0].children[j+2].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i+3][0].children[j+3].style.backgroundColor === "darkorange"){
+	      	console.log('darkorange wins');
 	      return true;
 	      }
 	    }
@@ -266,11 +284,11 @@ document.addEventListener('DOMContentLoaded', function(){
 	  }
 	  for(var i = 3; i < 6; i++){
 	    for(var j = 0; j< 4; j++){
-	      if(gameBoardArray[i][0].children[j].style.backgroundColor === "gold" &&
-	        gameBoardArray[i-1][0].children[j+1].style.backgroundColor === "gold" &&
-	        gameBoardArray[i-2][0].children[j+2].style.backgroundColor === "gold" &&
-	        gameBoardArray[i-3][0].children[j+3].style.backgroundColor === "gold"){
-	        	console.log('gold wins');
+	      if(gameBoardArray[i][0].children[j].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i-1][0].children[j+1].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i-2][0].children[j+2].style.backgroundColor === "darkorange" &&
+	        gameBoardArray[i-3][0].children[j+3].style.backgroundColor === "darkorange"){
+	        	console.log('darkorange wins');
 	      		return true;
 	      	}
 	    }
@@ -280,10 +298,14 @@ document.addEventListener('DOMContentLoaded', function(){
 		console.log("announceWinner")
 		if(player===true && checkWinner()===true){
 			$(".shell").hide();
-			$("h1").text("Congrats Black Won!!");
+			$('.rules').hide();
+			$("h1").text("Black Won!!");
+			$(".gif").show();
 		}else if(player===false && checkWinner()===true){
 			$(".shell").hide();
-			$("h1").text("Congrats Gold Won!!");
+			$('.rules').hide();
+			$("h1").text("Orange Won!!");
+			$(".gif2").show();
 		}
 	}
 	announceWinner();

@@ -1,6 +1,6 @@
 body{
   text-align: center;
-  background-color: lightgrey;
+  background-color: #b8e8ea;
   margin-top: 45px;
 }
 .cell{
@@ -17,13 +17,28 @@ body{
 h1 {
   color: black;
   text-align: center;
+  font-family: fantasy;
 }
 .shell{
   border-color: white;
-  margin-left: 50px;
-  margin-right: 50px;
-  border-style: inset;
+  border-radius: 25px;
+  background-color: rgb(26, 122, 204);
+  margin-left: 300px;
+  margin-right: 300px;
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top-style: none;
+}
+.rules{
+  font-family: fantasy;
+  margin-right: 80%;
+  margin-top: 12%;
+  float: left;
+  position: absolute;
+  padding: none;
+}
+span{
+  font-family: fantasy;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
 }
